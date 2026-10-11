@@ -38,6 +38,8 @@ h2{font-size:22px;margin:0 0 12px;display:inline-block;background:var(--ye);bord
 .tag{display:inline-block;border:3px solid var(--ink);border-radius:99px;padding:0 9px;font-size:12px;margin:0 4px 2px 0;line-height:1.5}
 .air{background:var(--wa)}.train{background:var(--co)}.walk{background:var(--gr)}.food{background:var(--ye)}.oth{background:#fff}
 .must-t{background:var(--co);transform:rotate(-4deg)}
+.cost{display:inline-block;margin:6px 0 2px;background:var(--ye);border:3px solid var(--ink);border-radius:16px;padding:0 12px;font-size:14px}
+.lk{display:inline-block;margin:6px 6px 0 0;color:var(--ink);background:var(--wa);border:3px solid var(--ink);border-radius:99px;padding:0 12px;font-size:13px;text-decoration:none}
 .pop{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes pop{0%{transform:scale(.88) translateY(14px);opacity:0}100%{transform:none;opacity:1}}
 .todo label{display:flex;gap:10px;align-items:center;padding:6px 0;cursor:pointer;font-size:15px}
@@ -88,36 +90,37 @@ footer{text-align:center;font-size:13px;margin-top:30px}
 <section id="stay"><h2>🏨 住宿</h2>
 <div class="card hotel"><span class="lab" style="background:var(--gr)">10/23 – 10/25</span><h3>住一 新今宮1號店</h3>
 <p>📍 大阪市浪速区恵美須西3-14-13</p><p>📞 +50-1724-2586</p>
-<p>入住 16:00 ／ 退房 10:00｜1樓可寄放行李</p>
+<p>入住 16:00 ／ 退房 10:00｜1樓可寄放行李</p><div class="cost">💰 $6,168.17，每人 NT$3,084</div>
 <p>🚶 走路約 6 分鐘到動物園站（御堂筋線、堺筋線）</p>
 <p>📶 Hotel_11_房號 ／ 密碼 88888888</p>
 <p>入住前 3 天收入住指南信、當天收房間資訊信（記得看垃圾郵件）。不提供每日清掃，加購毛巾需另收費。</p></div>
 <div class="card hotel"><span class="lab" style="background:var(--co)">10/25 – 10/27</span><h3>環球影城森格拉爾天空水療酒店</h3>
 <p>📍 大阪市此花区島屋6-2-25</p><p>📞 +81-6-4804-9500</p>
-<p>入住 15:00–24:00 ／ 退房 11:00 前</p>
+<p>入住 15:00–24:00 ／ 退房 11:00 前</p><div class="cost">💰 ¥35,167，每人 ¥17,583（約 NT$3,516）</div>
 <p>🚃 JR 夢咲線「環球城站」出站直通飯店</p>
 <p>♨ 14 樓 SkySpa 大浴場 15:00–11:00（桑拿 2:00–6:00 休息）</p>
 <p>🍳 早餐 ¥2,750／兒童 ¥1,320，7:00–10:00｜電梯需刷房卡，外出請隨身帶卡</p>
 <p>🎟 7:00–19:00 可在櫃檯買環球影城門票｜盥洗用品在公共區自取</p></div></section>
+<section><h2>💰 費用</h2><div class="card"><p style="margin:0">10/22 高鐵與晚餐 NT$200<br>10/23 Uber NT$186<br>住一 新今宮1號店 NT$3,084<br>森格拉爾酒店 約 NT$3,516</p><div class="cost"><b>每人合計約 NT$6,986</b></div><p style="margin:6px 0 0;font-size:12px">只計已記錄項目，機票、門票和餐費未含。</p></div></section>
 <footer>🌸 旅途愉快，吃好玩好 🌸</footer></main>
 <script>
 const T={a:['飛機','air'],t:['電車','train'],w:['步行','walk'],f:['美食','food'],o:['其他','oth']};
 // [時間,標題,類型,說明,必去]
 const D=[
+{d:'10/22',w:'四',s:'出發前一天：高鐵到桃園',i:[['19:10','搭高鐵到桃園','t','19:41 抵達桃園站',0,'每人約台幣 200 元'],['19:41','晚餐','f','水餃或八方雲集',0]]},
 {d:'10/23',w:'五',s:'機場 → 住宿 → 通天閣 → 梅田',i:[
-['03:30','起床，4:00 Uber，4:15 到機場','o','',0],
+['03:30','起床，4:00 Uber，4:15 到機場','o','',0,'Uber 台幣 373 元（每人 186 元）'],
 ['06:30','長榮起飛','a','第二航廈，10:10 抵達關西機場',0],
-['10:40','南海 Rapi:t 到新今宮','t','約 35–38 分，¥1,490（指定席）。備案：空港急行約 44 分 ¥930，每 15 分一班。出站走 3–5 分到飯店',0],
+['10:40','南海 Rapi:t 到新今宮','t','約 35–38 分（指定席）。備案：空港急行約 44 分，每 15 分一班。出站走 3–5 分到飯店',0,'Rapi:t ¥1,490／空港急行 ¥930'],
 ['12:00','飯店寄放行李','w','16:00 才能入住',0],
-['12:30','午餐：串炸達摩／釣吉','f','飛機上有吃，少吃一點。達摩有生氣大叔公仔，釣吉有巨大釣船',0],
+['12:30','午餐：串炸達摩／釣吉','f','飛機上有吃，少吃一點。達摩有生氣大叔公仔。釣吉新世界店在恵美須東2-3-14，11:00–23:00，06-6630-9026',0,'',[['釣吉官網菜單','https://tsuri-kichi.com/food_menu.html']]],
 ['14:00','通天閣展望台','w','新世界地標',1],
-['16:00','御堂筋線到梅田逛街','t','動物園前站 → 梅田，約 12 分 ¥240。吉伊卡哇麵包店、寶可夢中心、阪急阪神、LUCUA、友都八喜',1],
-['18:30','晚餐','f','自由選擇',0]]},
-{d:'10/24',w:'六',s:'琵琶湖一日遊 → 心齋橋・道頓堀 → 黑門市場',i:[
-['早上','日本橋 2 號出口集合','w','KKday／Klook 琵琶湖一日遊（Klook 這團附年輪蛋糕）',0],
+['16:00','御堂筋線到梅田逛街','t','動物園前站 → 梅田，約 12 分 ¥240。吉伊卡哇麵包店、寶可夢中心、阪急阪神、LUCUA、友都八喜',1,'¥240'],
+['18:30','晚餐','f','梅田百貨附近找一家吃',0]]},
+{d:'10/24',w:'六',s:'琵琶湖一日遊 → 心齋橋・道頓堀購物 → 晚餐待定',i:[
+['早上','日本橋 2 號出口集合','w','Klook 琵琶湖一日遊，好像附年輪蛋糕。集合地：大阪市中央區日本橋1丁目5',0,'',[['Klook 活動頁','https://www.klook.com/zh-TW/activity/127158-lake-biwa-shirahige-shrine-ukimido-one-day-tour-from-osaka-kyoto/'],['集合地點照片','https://res.klook.com/image/upload/v1739946396/p3eelpct7wf2g6vktwuy.jpg']]],
 ['全天','滋賀縣琵琶湖一日遊','o','白鬚神社、浮御堂等，跟團交通',1],
-['18:50','回到心齋橋、道頓堀','t','購物、逛街、吃晚餐',1],
-['晚上','黑門市場','f','看營業時間，下午較熱鬧',0]]},
+['18:50','回到心齋橋、道頓堀','t','購物、逛街，晚餐待定',1]]},
 {d:'10/25',w:'日',s:'難波寄物 → 海遊館 → 移動到環球影城',i:[
 ['早上','早餐：千成屋珈琲','f','1948 年創業，綜合果汁（ミックスジュース）發源名店',0],
 ['09:00','南海到難波，寄放行李','t','新今宮 → 難波 1 站約 2 分。EDION 愛電王寄物約台幣 80 元，南海難波站斜對面走 1 分',0],
@@ -125,7 +128,7 @@ const D=[
 ['13:00','浪速美食橫丁','f','會津屋章魚燒、自由軒咖哩、北極星蛋包飯，分頭排隊',0],
 ['14:30','聖瑪麗亞號帆船','o','航行約 45 分，看港灣大橋',0],
 ['15:45','天保山大摩天輪','o','挑透明水晶車廂，高 112.5 公尺',1],
-['17:30','晚餐：和牛螃蟹吃到飽','f','',0],
+['17:30','晚餐：和牛螃蟹吃到飽','f','心齋橋「丸花」，18:00 用餐',0],
 ['19:30','回難波取行李','t','',0],
 ['20:30','阪神 → 西九條 → JR 夢咲線','t','約 22 分 ¥390，刷 IC 卡。環球城站出站就是飯店',0]]},
 {d:'10/26',w:'一',s:'環球影城一日遊（萬聖節檔期）',i:[
@@ -150,7 +153,7 @@ const D=[
 const tabs=document.getElementById('tabs'),tl=document.getElementById('tl'),sum=document.getElementById('sum');
 function show(n){[...tabs.children].forEach((b,i)=>b.classList.toggle('on',i==n));
 sum.textContent=D[n].s;
-tl.innerHTML=D[n].i.map(x=>`<div class="it ${x[4]?'must':''}"><div class="card"><div class="tm">${x[0]}</div><h3>${x[1]}</h3><div><span class="tag ${T[x[2]][1]}">${T[x[2]][0]}</span>${x[4]?'<span class="tag must-t">必去</span>':''}</div>${x[3]?'<p>'+x[3]+'</p>':''}</div></div>`).join('');
+tl.innerHTML=D[n].i.map(x=>`<div class="it ${x[4]?'must':''}"><div class="card"><div class="tm">${x[0]}</div><h3>${x[1]}</h3><div><span class="tag ${T[x[2]][1]}">${T[x[2]][0]}</span>${x[4]?'<span class="tag must-t">必去</span>':''}</div>${x[3]?'<p>'+x[3]+'</p>':''}${x[5]?'<div class="cost">💰 '+x[5]+'</div>':''}${(x[6]||[]).map(l=>'<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🔗 '+l[0]+'</a>').join('')}</div></div>`).join('');
 [sum,tl].forEach(e=>{e.classList.remove('pop');void e.offsetWidth;e.classList.add('pop')})}
 D.forEach((x,i)=>{const b=document.createElement('button');b.innerHTML=`${x.d}<small>週${x.w}</small>`;b.onclick=()=>show(i);tabs.appendChild(b)});show(0);
 const TD=['長榮電子機票與護照','Visit Japan Web 入境資料','海遊館門票線上訂場次','琵琶湖一日遊確認集合時間','和牛螃蟹吃到飽訂位','環球影城門票與任天堂快速通關','USJ APP 下載並綁定票券','交通 IC 卡（ICOCA／Suica）','行動電源、薄外套','日圓現金與網路 SIM／eSIM'];
